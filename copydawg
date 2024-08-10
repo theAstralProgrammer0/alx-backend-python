@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# 0. make a new directory. Name it $DEST.
+# 1. clone the $SRC repo into $DEST
+
+
+# Function to display loading ellipses
+loading() {
+  while true; do
+    for i in {1..3}; do
+      echo -n "."
+      sleep 1
+    done
+    echo -ne "\b\b\b \b\b\b"
+
+SRC=$1
+DEST=$2
+
+
+if [[ $SRC =~ $ghhttps || $SRC =~ $ghssh ]]; then
+
+  if [[ -z $DEST ]]; then
+    $DEST = "./"
+    echo "Cloning the source repository in cwd..."
+
+    if [[ $DEST =~ "^(/[^/ ]*)+/?$" ]]; then
+      echo "Cloning the source repository in $DEST..."
+  fi
+  
+  git clone $SRC $DEST
+
+
+
+
+
+
+
+
